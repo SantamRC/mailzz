@@ -16,10 +16,8 @@ export default function Create() {
             recipient:reci,
             cc: cc
         }
-        axios.post('http://localhost:5000/create',body).then(
-            
-                console.log('Email Sent')
-            
+        axios.post('http://localhost:5000/create',body).then(           
+            console.log('Email Sent')            
         )
     }
     return (
