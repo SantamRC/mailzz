@@ -33,7 +33,7 @@ export default function Create() {
                 </div>
                 <div class="mb-3">
                     <label for="email-body" class="form-label">Email Body</label>
-                    <input type="text" class="form-control" id="email-body" onChange={(e)=>setBody(e.target.value)} />
+                    <textarea class="form-control" id="email-body" rows="3" onChange={(e)=>setBody(e.target.value)}></textarea>
                 </div>
                 <div class="mb-3">
                     <label for="recipient" class="form-label">Recipient</label>
