@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
 app.post('/create',(req,res)=>{
   var mailOptions = {
-    from: process.env.USER,
+    from: 'recurinmail@gmail.com',
     to: req.body.recipient,
     subject: req.body.subject,
     text: req.body.body
@@ -34,8 +34,8 @@ app.post('/create',(req,res)=>{
   var transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: process.env.USER,
-        pass: process.env.PASS
+        user: 'recurinmail@gmail.com',
+        pass: 'mfhrpjexgnigaicm'
     }
 });
   transporter.sendMail(mailOptions, function(error, info){
