@@ -20,7 +20,7 @@ export default function Frontpage() {
 
 
             <h3>Send recurring mails </h3>
-            <Link to='/login'>
+            <Link to='/create'>
                 <button type="button" class="btn btn-primary">Get Started</button>
             </Link>
         </div>

@@ -10,6 +10,7 @@ import About from './Components/About';
 import Dasboard from './Components/Dasboard';
 import Login from './Components/Login';
 import Create from './Components/Create';
+import History from './Components/History';
 
 function App() {
   return (
@@ -31,6 +32,9 @@ function App() {
             </Route>
             <Route exact path='/create'>
               <Create />
+            </Route>
+            <Route exact path='/history'>
+              <History />
             </Route>
         </Switch>
       </Router>
