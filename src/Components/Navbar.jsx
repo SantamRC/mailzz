@@ -13,10 +13,15 @@ export default function Navbar() {
                     <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item me-5">
-                        <a class="nav-link active text-white" aria-current="page" href="/about-us">About-Us</a>
+                            <Link to='about-us'>
+                                <a class="nav-link active text-white" aria-current="page" >About-Us</a>
+                            </Link>
                         </li>
                         <li class="nav-item me-5">
-                        <a class="nav-link text-white"  href="/dashboard">Dashboard</a>
+                            <Link to='/dashboard'>  
+                                <a class="nav-link text-white">Dashboard</a>
+                            </Link>
+                        
                         </li>
                     </ul>
                     </div>
