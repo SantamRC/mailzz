@@ -1,10 +1,10 @@
-
 import './App.css';
+import Front from './Components/Frontpage'
 
 function App() {
   return (
     <div className="App">
-      <h1>Frontpage</h1>
+      <Front />
     </div>
   );
 }
