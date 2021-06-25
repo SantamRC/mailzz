@@ -1,0 +1,28 @@
+export const Data=[
+    {
+        "email":"gfdgdfg",
+        "password":"dgfgdf",
+        "emails":[
+            {
+                "title":"sfdsf",
+                "subject":"dfdf",
+                "body":"dsgf",
+                "recipient":"dfd",
+                "cc":["dsfd","dsgfdg","dsgfdd"]
+            }
+        ]
+    },
+    {
+        "email":"gfdgdfg",
+        "password":"dgfgdf",
+        "emails":[
+            {
+                "title":"sfdsf",
+                "subject":"dfdf",
+                "body":"dsgf",
+                "recipient":"dfd",
+                "cc":["dsfd","dsgfdg","dsgfdd"]
+            }
+        ]
+    }
+]
