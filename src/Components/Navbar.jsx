@@ -23,6 +23,12 @@ export default function Navbar() {
                             </Link>
                         
                         </li>
+                        <li class="nav-item me-5">
+                            <Link to='/login'>  
+                                <a class="nav-link text-white">Login</a>
+                            </Link>
+                        
+                        </li>
                     </ul>
                     </div>
                 </div>
