@@ -6,18 +6,20 @@ export default function Create() {
     let [sub,setSub]=useState("")
     let [body,setBody]=useState("")
     let [reci,setReci]=useState("")
-    let [cc,setCC]=useState("")
+    let [cc,setCC]=useState([""])
 
     let onSend=(e)=>{
-        body={
+        const data={
             title:title,
             subject:sub,
             body:body,
             recipient:reci,
             cc: cc
         }
-        axios.post('http://localhost:5000/create',body).then(           
-            console.log('Email Sent')            
+        axios.post('http://localhost:5000/create',data).then(           
+            (res)=>{
+                console.log(res)     
+            }                           
         )
     }
     return (
@@ -77,9 +79,6 @@ export default function Create() {
                 <h3>
                     Email Content
                 </h3>
-
-
-
 
 
                 <div class="mb-3">
