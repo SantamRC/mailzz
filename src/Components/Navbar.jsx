@@ -14,16 +14,16 @@ export default function Navbar() {
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item me-5">
                             <Link to='about-us'>
-                                <a class="nav-link active text-white" aria-current="page" >About-Us</a>
+                                <a class="nav-link active text-white text-decoration-none" aria-current="page" >About-Us</a>
                             </Link>
                         </li>
                         <li class="nav-item me-5">
                             <Link to='/dashboard'>  
-                                <a class="nav-link text-white">Dashboard</a>
+                                <a className="text-decoration-none nav-link text-white" style = {{ textDecoration : "none"}}>Dashboard</a>
                             </Link>
                         
                         </li>
-                        <li class="nav-item me-5">
+                        <li class="nav-item me-5 text-decoration-none">
                             <Link to='/history'>  
                                 <a class="nav-link text-white">History</a>
                             </Link>
