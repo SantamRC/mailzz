@@ -20,7 +20,7 @@ export default function Navbar() {
                         </li>
                         {/* <li class="nav-item me-5">
                             <Link to='/dashboard'>  
-                                <a className="text-decoration-none nav-link text-white" style = {{ textDecoration : "none"}}>Dashboard</a>
+                                <a className="text-decoration-none nav-link text-white list-group-flush" style = {{ textDecoration : "none !important"}}>Dashboard</a>
                             </Link>
                         
                         </li>
