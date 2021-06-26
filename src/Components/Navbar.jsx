@@ -34,6 +34,13 @@ export default function Navbar() {
                             </Link>
                         
                         </li>
+
+                        <li class="nav-item me-5">
+                            <Link to='/scheduled'>  
+                                <a class="nav-link text-white">Scheduled</a>
+                            </Link>
+                        
+                        </li>
                     </ul>
                     </div>
                 </div>
