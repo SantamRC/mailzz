@@ -4,7 +4,7 @@ import React from 'react'
 export default function Login() {
     return (
         <div>
-            <form className='w-50 me-auto ms-auto mt-5'>
+            <form className='w-50 me-auto ms-auto mt-5 bg-dark bg-gradient p-4 text-white rounded-3'>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
@@ -17,7 +17,7 @@ export default function Login() {
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" />
                     <label class="form-check-label" for="exampleCheck1">Remember Me</label>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-secondary">Submit</button>
             </form>
         </div>
     )

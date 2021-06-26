@@ -21,8 +21,15 @@ export default function Create() {
         )
     }
     return (
-        <div>
-            <form className='w-50 m-auto mt-5'>
+        <div className= "container">
+
+
+            <form className='w-50 m-auto mt-5 bg-light p-4 rounded'>
+                <h4>
+                    Fillup the email body to schedule or send an email.
+                </h4>
+
+
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" onChange={(e)=>setTitle(e.target.value)} />
