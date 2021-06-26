@@ -22,7 +22,12 @@ let Data=new Schema({
             recipient:{
                 type:String
             },
-            cc:[String]
+            cc:[{
+                type:String
+            }],
+            interval:{
+                type:String
+            }
         }
     ]
 

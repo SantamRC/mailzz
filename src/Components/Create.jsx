@@ -63,7 +63,7 @@ export default function Create() {
     let [sub,setSub]=useState("")
     let [body,setBody]=useState("")
     let [reci,setReci]=useState("")
-    let [cc,setCC]=useState("")
+    let [cc,setCC]=useState([""])
 
     let onSun=(e) => {
         e.preventDefault();
@@ -71,15 +71,17 @@ export default function Create() {
     }
 
     let onSend=(e)=>{
-        body={
+        const data={
             title:title,
             subject:sub,
             body:body,
             recipient:reci,
             cc: cc
         }
-        axios.post('http://localhost:5000/create',body).then(           
-            console.log('Email Sent')            
+        axios.post('http://localhost:5000/create',data).then(           
+            (res)=>{
+                console.log(res)     
+            }                           
         )
     }
     return (
