@@ -5,16 +5,31 @@ This is  Recurring Mail Sending App
 Hosted on <a href="http://mailzz.herokuapp.com/"> mailzz.herokuapp.com </a>
 
 ## Installation Instructions 
+Clone the Repo and navigate inside the directory
 ```
 git clone https://github.com/SantamRC/mailzz.git
 cd mailzz
+```
+Build the Frontend
+```
 npm run build
+```
+Build the backend
+```
 cd server
 npm run build
+```
 
-cd ..
+To start the app use
+```
 npm start
 ```
+To start the backend
+```
+cd server
+nodemon server
+```
+
 
 Move to post localhost:3000 and see the magic.
 <br/>
