@@ -2,7 +2,7 @@
 
 This is  Recurring Mail Sending App
 <br/>
-Hosted on <a href="http://mailzz.herokuapp.com/"> mailzz.herokuapp.com </a>
+Hosted on <a href="https://mailzz.herokuapp.com/"> mailzz.herokuapp.com </a>
 
 ## Installation Instructions 
 Clone the Repo and navigate inside the directory
