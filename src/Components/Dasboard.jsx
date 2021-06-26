@@ -3,13 +3,6 @@ import {Data} from '../data'
 
 export default function Dasboard() {
     return (
-<<<<<<< HEAD
-        <div>
-            <h1>Dashboard</h1>
-            {Data.map((info)=>(
-                <h1>{info.email}</h1>
-            ))}
-=======
         <div className="container">
             <h3>
                 Username
@@ -19,7 +12,6 @@ export default function Dasboard() {
                 <li className="list-group-item disabled" aria-disabled="true">{info.email}</li>
             )}
             </ul>
-
             <h3>
                 Password
             </h3>
@@ -28,7 +20,6 @@ export default function Dasboard() {
                 <li className="list-group-item disabled" aria-disabled="true">{info.password}</li>
             )}
             </ul>
->>>>>>> ed58baa52ac87c68d1f890409651e24dcbe7a6dd
         </div>
     )
 }
