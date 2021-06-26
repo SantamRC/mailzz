@@ -37,7 +37,7 @@ export default function Navbar() {
 
                         <li class="nav-item me-5">
                             <Link to='/scheduled'>  
-                                <a class="nav-link text-white">Scheduled</a>
+                                <a class="nav-link text-white">Schedule</a>
                             </Link>
                         
                         </li>
