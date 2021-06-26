@@ -23,11 +23,11 @@ Move to post localhost:3000 and see the magic.
 MERN 
 
 <br/>
-Contributors - 
-<br/>
-<a href="https://github.com/SantamRC">@SantamRC</a>
-<br/>
-<a href="https://github.com/sa-y-an">@sa-y-an</a>
+> Contributors - 
+> <br/>
+> <a href="https://github.com/SantamRC">@SantamRC</a>
+> <br/>
+> <a href="https://github.com/sa-y-an">@sa-y-an</a>
 
 
 
