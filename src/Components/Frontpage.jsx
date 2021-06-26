@@ -16,7 +16,7 @@ export default function Frontpage() {
                 <br />
 
                 <h3>Send recurring mails </h3>
-                <Link to='/create'>
+                <Link to='/signup'>
                     <button type="button" class="btn btn-secondary">Get Started</button>
                 </Link>
 

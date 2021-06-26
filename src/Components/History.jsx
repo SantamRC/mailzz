@@ -9,6 +9,8 @@ export default function History() {
                 The list of Emails sent 
             </h3>
             
+           <h1>User logged in</h1>
+
             <div class="container-fluid bg-gradient rounded-3 p-3">
             <table class="table text-white">
                 <thead>
@@ -71,6 +73,7 @@ export default function History() {
             </div>
 
             <br />
+
         </div>
     )
 }
