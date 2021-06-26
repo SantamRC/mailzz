@@ -5,13 +5,14 @@ import {
   Route,
 } from "react-router-dom";
 import Navbar from './Components/Navbar';
-import Front from './Components/Frontpage'
+import Landing from './Components/Landing';
 import About from './Components/About';
 import Dasboard from './Components/Dasboard';
 import Login from './Components/Login';
 import Create from './Components/Create';
 import History from './Components/History';
 import Scheduled from './Components/Scheduled';
+import Signup from './Components/Signup';
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
         <Navbar />
         <Switch>
             <Route exact path='/'>
-              <Front />
+              <Landing />
             </Route>
             <Route exact path='/about-us'>
               <About />
@@ -40,6 +41,10 @@ function App() {
             <Route exact path='/scheduled'>
               <Scheduled />
             </Route>
+            <Route exact path='/signup'>
+              <Signup />
+            </Route>
+            
         </Switch>
       </Router>
 

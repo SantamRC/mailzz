@@ -92,8 +92,8 @@ mongoose.connect(mongodb, { useNewUrlParser: true,useUnifiedTopology: true }).th
 
 app.post('/signup',(req,res)=>{
   let body={
-    Username:req.body.username,
-    Password:req.body.password,
+    Username:req.body.Username,
+    Password:req.body.Password,
     Emails:[]
   }
   console.log(body)

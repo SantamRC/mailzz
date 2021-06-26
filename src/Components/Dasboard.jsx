@@ -4,6 +4,7 @@ import {Data} from '../data'
 export default function Dasboard() {
     return (
         <div className="container">
+            <button type="button" class="btn btn-primary ">History</button>
             <h3>
                 Username
             </h3>
