@@ -22,6 +22,14 @@ Move to post localhost:3000 and see the magic.
 ### Tech Stack Used 
 MERN 
 
+### Features 
+
+- Login and signup via  Username - password
+- Gmail Sync (Login with Gmail option)
+- Create/Edit the mail features.
+- Home page ( has the list of all the mails scheduled for future)
+- History Page ( has the list of mails sent till now )
+
 <br/>
 
 > Contributors - 
