@@ -1,11 +1,20 @@
-import React from 'react'
+import React,{useState} from 'react'
 import {Link} from "react-router-dom";
+import axios from 'axios'
 
 export default function History() {
+    const [data,setData]=useState({})
+    const get=()=>{
+        axios.get('http://localhost:5000/dashboard',{
+            Username:localStorage.getItem('name')
+        }).then((res)=>{
+            setData(res)
+            console.log(data)
+        })
+    }
     return (
         <div>
-            
-           <h1>User logged in</h1>
+           User logged in
         </div>
     )
 }
