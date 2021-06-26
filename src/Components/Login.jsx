@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Login() {
     return (
-        <div>
-            <form className='w-50 me-auto ms-auto mt-5 bg-dark bg-gradient p-4 text-white rounded-3'>
+        <div className="container-fluid bg-dark bg-gradient text-white p-5" style = {{ minHeight : "100vh"}}>
+            <form className='w-50 me-auto ms-auto mt-5 bg-transparent bg-gradient p-4 text-white rounded-3'>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Email address</label>
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
