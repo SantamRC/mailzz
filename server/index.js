@@ -13,7 +13,7 @@ let Data=require('./model')
 const MongoCron=require('mongodb-cron')
 
 //var mongodb = 'mongodb://localhost:27017/Email'
-var mongodb=`mongodb+srv://santam:${process.env.MONGOPASS}@cluster.q6ixt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
+var mongodb=`mongodb+srv://santam:santam12345@cluster.q6ixt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 app.use(express.urlencoded({
     extended: true
@@ -177,9 +177,3 @@ app.post('/login',(req,res)=>{
 // }
 //run()
 
-const execute=()=>{
-  console.log(jobs)
-  
-}
-
-execute()
