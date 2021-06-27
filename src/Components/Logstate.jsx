@@ -12,9 +12,7 @@ export default function Logstate() {
    if(localStorage.getItem('name')){
        return (
         <li class="nav-item me-5" onClick={()=>logout()}>
-            <Link>
-                <a class="nav-link text-white">Logout</a>
-            </Link>
+            <a class="nav-link text-white">Logout</a>          
         </li>
        )
    }else{
