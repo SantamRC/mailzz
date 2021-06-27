@@ -10,28 +10,30 @@ Clone the Repo and navigate inside the directory
 git clone https://github.com/SantamRC/mailzz.git
 cd mailzz
 ```
-Build the Frontend
+Build the dependencies for frontend
 ```
-npm run build
+npm install
 ```
-Build the backend
-```
-cd server
-npm run build
-```
-
-To start the app use
+Run the Frontend
 ```
 npm start
 ```
-To start the backend
+
+
+Build the backend
 ```
 cd server
+npm install
+```
+
+
+To start the backend
+```
 nodemon server
 ```
 
 
-Move to post localhost:3000 and see the magic.
+Move to post localhost:port and see the magic.
 <br/>
 
 ### Tech Stack Used 
