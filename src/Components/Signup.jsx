@@ -1,6 +1,6 @@
 import {useState,useContext} from 'react'
 import axios from 'axios'
-import {Link} from "react-router-dom";
+import {useHistory} from "react-router-dom";
 import Context from '../Helper/Context'
 import GoogleLogin from 'react-google-login';
 
@@ -8,6 +8,11 @@ export default function Signup() {
     const [username,setUser]=useState("")
     const [password,setPass]=useState("")
     const {state,actions}=useContext(Context)
+    const history=useHistory();
+
+    const responseGoogle = (response) => {
+        alert("hello")
+    }
 
     let onSend=(e)=>{
         
@@ -23,6 +28,7 @@ export default function Signup() {
         //const run=()=>actions({type:'setState',payload:username})
         localStorage.setItem('name',username)
         console.log("The state is: "+state)
+        history.push('/')
     }
 
     return (
@@ -46,14 +52,6 @@ export default function Signup() {
                     Else Sign up with Google
                     <br />
                     <br />
-
-                    <GoogleLogin
-                        clientId=""
-                        buttonText="Login"
-                        onSuccess={""}
-                        onFailure={""}
-                        cookiePolicy={'single_host_origin'}
-                    />
                 </h4>
             </div>
         </div>

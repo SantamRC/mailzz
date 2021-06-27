@@ -1,9 +1,12 @@
 import {useState} from 'react'
 import axios from 'axios'
+import {useHistory} from "react-router-dom";
 
 export default function Login() {
     const [username,setUser]=useState("")
     const [password,setPass]=useState("")
+    const history=useHistory();
+
     let onSend=(e)=>{
         const body={
             Username:username,
@@ -16,6 +19,7 @@ export default function Login() {
             console.log(res.data)  
         }                
         )
+        history.push('/')
     }
 
     return (
