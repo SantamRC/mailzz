@@ -179,10 +179,6 @@ export default function Create() {
                     </div>
                     )) }
                 </div>
-                <div class="mb-3 form-check">
-                    <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-                </div>
                 <button onClick={()=>onSend()} class="btn btn-secondary">Submit</button>
             </form>
         </div>
