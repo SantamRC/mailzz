@@ -48,12 +48,7 @@ export default function Signup() {
                 </div>
                 <button  onClick={()=>onSend()} class="btn btn-secondary">Signup</button>
                 <hr />
-                <h4>
-                    Else Sign up with Google
-                    <br />
-                    <br />
-                </h4>
-            </div>
+        </div>
         </div>
     )
 }

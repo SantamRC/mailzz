@@ -1,4 +1,5 @@
 import './App.css';
+import {useState} from 'react'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,8 +16,12 @@ import Scheduled from './Components/Scheduled';
 import Signup from './Components/Signup';
 
 function App() {
+
+  const [page,setPage]=useState('home')
+
   return (
     <div className="App">
+      <h2 className='d-none'>{page}</h2>
       <Router>
         <Navbar />
         <Switch>
@@ -30,7 +35,7 @@ function App() {
               <Dasboard />
             </Route>
             <Route exact path='/login'>
-              <Login />
+              <Login change={setPage} />
             </Route>
             <Route path='/create'>
               <Create />
