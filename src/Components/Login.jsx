@@ -9,7 +9,7 @@ export default function Login() {
             Username:username,
             Password:password
         }
-        axios.post('http://localhost:5000/login',body).then((res)=>{
+        axios.post('https://mailzz.herokuapp.com/login',body).then((res)=>{
             if(res.data.response=="logged"){
                 localStorage.setItem('name',username)
             } 

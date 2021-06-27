@@ -5,14 +5,15 @@ const nodemailer = require('nodemailer');
 const mongoose=require('mongoose')
 const cors = require('cors')
 var bodyParser = require('body-parser')
-const port=process.env.PORT || 5000;
+const port=process.env.PORT;
 const cron = require('node-cron');
 const cronJob = require('cron').CronJob;
 let sec,min,hr,mon,week
 let Data=require('./model')
 const MongoCron=require('mongodb-cron')
 
-var mongodb = 'mongodb://localhost:27017/Email'
+//var mongodb = 'mongodb://localhost:27017/Email'
+var mongodb=`mongodb+srv://santam:santam12345@cluster.q6ixt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 app.use(express.urlencoded({
     extended: true
@@ -81,7 +82,7 @@ if(process.env.NODE_ENV=='production'){
 }
 
 app.listen(port, () => {
-  console.log(`Serverlistening at http://localhost:${port}`)
+  console.log(`Serverlistening at :${process.env.PORT || 5000}`)
 })
 
 mongoose.connect(mongodb, { useNewUrlParser: true,useUnifiedTopology: true }).then(
@@ -115,8 +116,9 @@ app.post('/create',(req,res)=>{
     cc:req.body.cc,
     interval:req.body.interval
   }
+  console.log(data)
   Data.update(
-    {Username:req.body.username},
+    {Username:req.body.Username},
     {$push:{Emails:data}},
     (err,res)=>{
       if(err){
@@ -139,7 +141,8 @@ app.post('/create',(req,res)=>{
 })
 
 
-app.get('/dashboard',(req,res)=>{
+app.post('/dashboard',(req,res)=>{
+  console.log("This is the body:"+req.body.Username)
   Data.find({Username:req.body.Username},(err,result)=>{
     if(err){console.log(err)}
     else{
@@ -174,9 +177,3 @@ app.post('/login',(req,res)=>{
 // }
 //run()
 
-const execute=()=>{
-  console.log(jobs)
-  
-}
-
-execute()

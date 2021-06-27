@@ -32,7 +32,7 @@ function App() {
             <Route exact path='/login'>
               <Login />
             </Route>
-            <Route exact path='/create'>
+            <Route path='/create'>
               <Create />
             </Route>
             <Route exact path='/history'>

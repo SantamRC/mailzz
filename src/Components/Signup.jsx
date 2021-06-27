@@ -15,7 +15,7 @@ export default function Signup() {
             Username:username,
             Password:password
         }
-        axios.post('http://localhost:5000/signup',body).then((res)=>{
+        axios.post('https://mailzz.herokuapp.com/signup',body).then((res)=>{
             console.log(res)     
         }                
         )
