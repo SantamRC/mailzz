@@ -82,7 +82,7 @@ if(process.env.NODE_ENV=='production'){
 }
 
 app.listen(port, () => {
-  console.log(`Serverlistening at http://localhost:${port}`)
+  console.log(`Serverlistening at :${process.env.PORT || 5000}`)
 })
 
 mongoose.connect(mongodb, { useNewUrlParser: true,useUnifiedTopology: true }).then(
