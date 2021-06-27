@@ -78,7 +78,7 @@ export default function Create() {
             cc: cc,
             interval:interval
         }
-        axios.post('http://localhost:5000/create',data).then(           
+        axios.post('https://mailzz.herokuapp.com/create',data).then(           
             (res)=>{
                 console.log(res)     
             }                           

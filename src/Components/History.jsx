@@ -6,7 +6,7 @@ import Emails from './Emails'
 export default function History() {
     const [username,setUser]=useState("")
     useEffect(()=>{
-        axios.post('http://localhost:5000/dashboard',{"Username":localStorage.getItem('name')}).then((res)=>{
+        axios.post('https://mailzz.herokuapp.com/dashboard',{"Username":localStorage.getItem('name')}).then((res)=>{
            // console.log(localStorage.getItem('name'))
             console.log(res.data[0])
             setUser(res.data[0].Username)
