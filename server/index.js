@@ -139,7 +139,8 @@ app.post('/create',(req,res)=>{
 })
 
 
-app.get('/dashboard',(req,res)=>{
+app.post('/dashboard',(req,res)=>{
+  console.log("This is the body:"+req.body.Username)
   Data.find({Username:req.body.Username},(err,result)=>{
     if(err){console.log(err)}
     else{
