@@ -1,20 +1,40 @@
-import {useState,useContext} from 'react'
-import Context from '../Helper/Context'
+import React,{useState,useEffect} from 'react'
+import {Link} from "react-router-dom";
+import axios from 'axios'
+import Emails from './Emails'
 
-export default function Scheduled() {
-    const {state,actions}=useContext(Context)
+export default function History() {
     const [username,setUser]=useState("")
-
-    const change=()=>{
-        localStorage.setItem('name',username)
-        actions({type:'setState',payload:username})
-    }
-
+    useEffect(()=>{
+        axios.post('https://mailzz.herokuapp.com/dashboard',{"Username":localStorage.getItem('name')}).then((res)=>{
+           // console.log(localStorage.getItem('name'))
+            console.log(res.data[0])
+            setUser(res.data[0].Username)
+        })
+    },[])
     return (
-        <div>
-           {<h4>THe user name is:{state}</h4>}
-           <input type="text" placeholder="Username" onChange={(e)=>setUser(e.target.value)} ></input>
-           <button type="button" class="btn btn-primary" onClick={()=>change()} >Change</button>
+        <div className = "container-fluid bg-dark bg-gradient text-white" style= {{ minHeight : "100vh"}}>
+            
+            <div className="container ">
+                <br />
+
+            <h1>
+                History
+            </h1>
+            
+           {/* <button onClick={()=>get()}>Get History</button> */}
+           <Emails />
+
+           <p>
+                To schedule a new email click on the button below.
+           </p>
+
+           <Link to='/create'>
+                <button type="button" class="btn btn-secondary">Schedule</button>
+            </Link>
+
+            </div>
+           
         </div>
     )
 }
