@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const mongoose=require('mongoose')
 const cors = require('cors')
 var bodyParser = require('body-parser')
-const port=process.env.PORT || 5000;
+const port=process.env.PORT;
 const cron = require('node-cron');
 const cronJob = require('cron').CronJob;
 let sec,min,hr,mon,week
