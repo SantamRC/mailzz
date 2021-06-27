@@ -23,10 +23,6 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-
-
-
-
 export default function Create() {
 
 
@@ -65,6 +61,7 @@ export default function Create() {
     let [body,setBody]=useState("")
     let [reci,setReci]=useState("")
     let [cc,setCC]=useState([""])
+    let [interval,setInterval]=useState("")
 
     let onSun=(e) => {
         e.preventDefault();
@@ -73,11 +70,13 @@ export default function Create() {
 
     let onSend=(e)=>{
         const data={
+            Username:localStorage.getItem('name'),
             title:title,
             subject:sub,
             body:body,
             recipient:reci,
-            cc: cc
+            cc: cc,
+            interval:interval
         }
         axios.post('http://localhost:5000/create',data).then(           
             (res)=>{
@@ -109,8 +108,8 @@ export default function Create() {
                 <Switch>
                     <Route exactly path='/create/recurring'>
                         <div className="mt-2">
-                            <button type="button" class="btn btn-light ms-2">20s</button>
-                            <button type="button" class="btn btn-light ms-2">30s</button>
+                            <button type="button" onClick={()=>setInterval('20 * * * * *')} class="btn btn-light ms-2">20s</button>
+                            <button type="button" onClick={()=>setInterval('30 * * * * *')} class="btn btn-light ms-2">30s</button>
                         </div>
                         
                     </Route>

@@ -12,7 +12,8 @@ let sec,min,hr,mon,week
 let Data=require('./model')
 const MongoCron=require('mongodb-cron')
 
-var mongodb = 'mongodb://localhost:27017/Email'
+//var mongodb = 'mongodb://localhost:27017/Email'
+var mongodb=`mongodb+srv://santam:${process.env.MONGOPASS}@cluster.q6ixt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 app.use(express.urlencoded({
     extended: true
@@ -115,8 +116,9 @@ app.post('/create',(req,res)=>{
     cc:req.body.cc,
     interval:req.body.interval
   }
+  console.log(data)
   Data.update(
-    {Username:req.body.username},
+    {Username:req.body.Username},
     {$push:{Emails:data}},
     (err,res)=>{
       if(err){
