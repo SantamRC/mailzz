@@ -8,6 +8,7 @@ import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 import Icon from '@material-ui/core/Icon';
 import { v4 as uuidv4 } from 'uuid';
+import {Switch,Route,useRouteMatch,Link} from 'react-router-dom'
 
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -84,66 +85,62 @@ export default function Create() {
             }                           
         )
     }
+    let { path, url } = useRouteMatch();
     return (
         <div className="container-fluid bg-dark bg-gradient text-white p-5" >
-
-
             <form className='w-50 m-auto mt-5 bg-transparent bg-gradient p-5 rounded'>
                 <h4>
                     Fillup the email body to schedule or send an email.
                 </h4>
-
                 <br />
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select the schedule type of Email</option>
-                    <option value="1">Recurring</option>
-                    <option value="2">Weekly</option>
-                    <option value="3">Monthly</option>
-                    <option value="3">Yearly</option>
-                </select>
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>If Recurring Time Interval</option>
-                    <option value="1">20s</option>
-                    <option value="2">30s</option>
-                </select>
+                <Link to={`${url}/recurring`} >
+                    <button type="button" class="btn btn-light ms-2">Recurring</button>
+                </Link>
+                <Link to={`${url}/weekly`} >
+                    <button type="button" class="btn btn-light ms-2">Weekly</button>
+                </Link>
+                <Link to={`${url}/monthly`} >
+                    <button type="button" class="btn btn-light ms-2">Monthly</button>
+                </Link>
+                <Link to={`${url}/yearly`} >
+                    <button type="button" class="btn btn-light ms-2">Yearly</button>
+                </Link>
                 <br />
-
-                <label for="schedule"> If Yearly/Montly Date </label>
-                <br />
-                <input type="datetime-local" id="birthday" name="birthday" />
-
-                <br />
-
-
-                <br />
-
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Select day</option>
-                    <option value="1">Monday</option>
-                    <option value="1">Tuesday</option>
-                    <option value="1">Wednesday</option>
-                    <option value="1">Thursday</option>
-                    <option value="1">Friday</option>
-                    <option value="1">Saturday</option>
-                    <option value="1">Sunday</option>
-                   
-                </select>
-                <label for="appt">Select a time:</label>
-                <input type="time" id="appt" name="appt" />
-
-                <br />
-                <br />
+                <Switch>
+                    <Route exactly path='/create/recurring'>
+                        <div className="mt-2">
+                            <button type="button" class="btn btn-light ms-2">20s</button>
+                            <button type="button" class="btn btn-light ms-2">30s</button>
+                        </div>
+                        
+                    </Route>
+                    <Route exactly path='/create/weekly'>
+                        <select class="form-select mt-3" aria-label="Default select example">
+                            <option selected>Select day</option>
+                            <option value="1">Monday</option>
+                            <option value="1">Tuesday</option>
+                            <option value="1">Wednesday</option>
+                            <option value="1">Thursday</option>
+                            <option value="1">Friday</option>
+                            <option value="1">Saturday</option>
+                            <option value="1">Sunday</option>
+                        </select>
+                    </Route>
+                    <Route exactly path='/create/monthly'>
+                        <label for="appt">Select a time:</label>
+                        <input type="time" id="appt" name="appt" />
+                    </Route>
+                    <Route exactly path='/create/yearly'>
+                        <label className='mt-2 d-block' for="schedule"> Select Date and time</label>
+                        <input type="datetime-local" id="birthday" name="birthday" />
+                    </Route>
+                </Switch>
 
                 <hr />
 
                 <h3>
                     Email Content
-                </h3>
-
-
-                
+                </h3>               
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">Title</label>
                     <input type="text" class="form-control" id="exampleInputEmail1" onChange={(e)=>setTitle(e.target.value)} />
