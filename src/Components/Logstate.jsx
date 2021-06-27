@@ -1,18 +1,20 @@
 import React from 'react'
-import {Link} from "react-router-dom";
+import {Link,useHistory} from "react-router-dom";
 
 export default function Logstate() {
+    const history=useHistory();
 
     const logout=()=>{
         localStorage.removeItem('name')
+        history.push('/')
     }
 
    if(localStorage.getItem('name')){
        return (
         <li class="nav-item me-5" onClick={()=>logout()}>
-           
+            <Link>
                 <a class="nav-link text-white">Logout</a>
-           
+            </Link>
         </li>
        )
    }else{
