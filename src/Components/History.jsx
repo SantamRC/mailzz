@@ -13,14 +13,28 @@ export default function History() {
         })
     },[])
     return (
-        <div>
-            <Link to='/create'>
-                <button type="button" class="btn btn-success">Create</button>
-            </Link>
+        <div className = "container-fluid bg-dark bg-gradient text-white" style= {{ minHeight : "100vh"}}>
             
-           <h1>Username: {username}</h1>
+            <div className="container ">
+                <br />
+            <p >
+                Hello {username} !!! <br/>
+                The list of email you have scheduled are listed in the table below.
+            </p>
+            
+            
            {/* <button onClick={()=>get()}>Get History</button> */}
            <Emails />
+
+           <p>
+                To schedule a new email click on the button below.
+           </p>
+
+           <Link to='/create'>
+                <button type="button" class="btn btn-secondary">Schedule</button>
+            </Link>
+
+            </div>
            
         </div>
     )

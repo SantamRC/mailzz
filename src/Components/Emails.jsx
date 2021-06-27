@@ -15,16 +15,37 @@ export default function Emails() {
    }else{
        return(
            <div>
-               {emails.map((item)=>(
-               <div className="card d-block w-50 m-auto mt-1 bg-dark" >
-                   <div className="card-body">
-                   <h5 class="card-title text-center text-white">Title: {item.title}</h5>
-                   <h5 class="card-title text-center text-white">Subject: {item.subject}</h5>
-                   <h5 class="card-title text-center text-white">Body: {item.body}</h5>
-                   <h5 class="card-title text-center text-white">Recipient: {item.recipient}</h5>
-                   </div>
-               </div>
-               ))}
+
+                <div className="container bg-transparent bg-gradient text-white" >
+
+                <table class="table text-white">
+                <thead>
+                    <tr>   
+                    <th scope="col">Title</th>
+                    <th scope="col">Subject</th>
+                    <th scope="col">Body</th>
+                    <th scope="col">Reciepent</th>
+                    <th scope="col">CC</th>
+                    <th scope="col">Type</th>
+                    </tr>
+                </thead>
+
+                     {emails.map((item)=>(
+                
+               
+                    <tbody>
+                        <tr>
+                        <th scope="row">{item.title}</th>
+                        <td>{item.subject}</td>
+                        <td>{item.body}</td>
+                        <td>{item.recipient}</td>
+                        <td>{item.cc}</td>
+                        <td>Recurring</td>
+                        </tr>
+                    </tbody>                      
+               ))} </table>
+                 
+           </div>
            </div>
        )
    }

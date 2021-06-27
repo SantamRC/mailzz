@@ -33,18 +33,14 @@ export default function Signup() {
 
     return (
         <div className="container-fluid bg-dark bg-gradient text-white p-5" style = {{ minHeight : "100vh"}}>
-            <div className='w-50 me-auto ms-auto mt-5 bg-transparent bg-gradient p-4 text-white rounded-3'>
+            <div className=' container bg-transparent bg-gradient p-4 text-white rounded-3'>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" >Username</label>
-                    <input type="text"  id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setUser(e.target.value)} />
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input type="text"  id="exampleInputEmail1" class="form-control" aria-describedby="emailHelp" onChange={(e)=>setUser(e.target.value)} />
                 </div>
                 <div class="mb-3">
-                    <label for="exampleInputPassword1" >Password</label>
-                    <input type="password"  id="exampleInputPassword1" onChange={(e)=>setPass(e.target.value)} />
-                </div>
-                <div class="mb-3 ">
-                    <input type="checkbox" id="exampleCheck1" />
-                    <label for="exampleCheck1">Remember Me</label>
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input type="password" class="form-control"  id="exampleInputPassword1" onChange={(e)=>setPass(e.target.value)} />
                 </div>
                 <button  onClick={()=>onSend()} class="btn btn-secondary">Signup</button>
                 <hr />
