@@ -1,5 +1,5 @@
 import React from 'react'
-import Santam from '../Assets/santam.jpg'
+import Santam from '../Assets/santam.png'
 import Sayan from '../Assets/sayan.png'
 
 export default function About() {
