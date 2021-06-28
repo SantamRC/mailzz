@@ -14,6 +14,7 @@ import Create from './Components/Create';
 import History from './Components/History';
 import Scheduled from './Components/Scheduled';
 import Signup from './Components/Signup';
+import ProtectedRoute from './Components/ProtectedRoute';
 
 function App() {
 
@@ -26,25 +27,16 @@ function App() {
         <Navbar />
         <Switch>
             <Route exact path='/'>
-              <Landing />
+              <ProtectedRoute />
             </Route>
             <Route exact path='/about-us'>
               <About />
-            </Route>
-            <Route exact path='/dashboard'>
-              <Dasboard />
             </Route>
             <Route exact path='/login'>
               <Login change={setPage} />
             </Route>
             <Route path='/create'>
               <Create />
-            </Route>
-            <Route exact path='/history'>
-              <History />
-            </Route>
-            <Route exact path='/scheduled'>
-              <Scheduled />
             </Route>
             <Route exact path='/signup'>
               <Signup />

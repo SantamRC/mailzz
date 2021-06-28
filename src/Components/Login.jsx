@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import axios from 'axios'
-import {useHistory} from "react-router-dom";
+import {useHistory,Link} from "react-router-dom";
 
 export default function Login(props) {
     const [username,setUser]=useState("")
@@ -17,10 +17,10 @@ export default function Login(props) {
                 localStorage.setItem('name',username)
             } 
             console.log(res.data)  
+            history.push('/')
         }                
         )
-        history.push('/')
-        props.change('new')
+      
     }
 
     return (
